@@ -4,4 +4,45 @@ Comments:
 C# comments is '//'
 
 variables
-In C# there are different types of variables (defined with defferent keywords), for example
+In C# there are different types of variables (defined with defferent keywords), for example:
+int - stores integer (whole numbers) without decimals, such as 123, or -123
+double - store floating point numbers, with decimals such as 19.99 or -19.99
+char - store single character such as 'a' or 'B'. Char values are surrounded by single quotes
+string - store text, such as "Hello World". String values are surrounded by double quotes
+bool - sotres values with two states: true or false
+By the way, "Hello World" is first time run the program show it.
+
+
+Declaring (Create) variables
+
+Syntax:
+type variableName = value;
+
+example:
+string name = "Pang";
+int numbers = 30;
+double doubleNumber = 5.99;
+bool boolType = true;
+
+一般decalring variable name 有幾種
+1. string create_user_name = "";
+2. string createUserName = "";
+有大細寫 or 用 _ 來分開D字 一般decalring個variable name 都有意思 方便自己同人哋睇
+
+Coding
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string username = ""; 
+      Console.WriteLine("My name is " + " " + username); // when run the program username output is My name is ;
+      username = "Pang";
+      Console.WriteLine("My name is " + " " + username); // when run the program username output is My name is Pang;
+    }
+  }
+}
+
