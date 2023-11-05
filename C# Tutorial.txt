@@ -13,6 +13,15 @@ bool - sotres values with two states: true or false
 By the way, "Hello World" is first time run the program show it.
 
 
+Data Type	            Size	            Description
+int	                    4 bytes	            Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	                8 bytes	            Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	                4 bytes	            Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	                8 bytes	            Stores fractional numbers. Sufficient for storing 15 decimal digits
+bool	                1 bit	            Stores true or false values
+char	                2 bytes	            Stores a single character/letter, surrounded by single quotes
+string	                2 bytes             per character	Stores a sequence of characters, surrounded by double quotes
+
 Declaring (Create) variables
 
 Syntax:
@@ -45,4 +54,37 @@ namespace HelloWorld
     }
   }
 }
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+int cannot assign to string, but you still want it you must using type casting
+for example:
+int the_integer = 10;
+string int_to_string = "";
+int_to_string = Convert.ToString(the_integer); // int_to_string = "10";
+
+點解唔直接打入去？
+因為有幾會input一個未個value 所以個variable value 有機會每次唔同
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Operators:
+
+Operator	        Name	        Description	                            Example
++	                Addition	    Adds together two values	            x + y	
+-	                Subtraction	    Subtracts one value from another	    x - y	
+*	                Multiplication	Multiplies two values	                x * y	
+/	                Division	    Divides one value by another	        x / y	
+%	                Modulus	        Returns the division remainder	        x % y	
+++	                Increment	    Increases the value of a variable by 1	x++	
+--	                Decrement	    Decreases the value of a variable by 1	x--
+
+
+For example:
+int addition = 0; //output: 0
+addition++; // output: 1
+addition += 10; //output: 10  
+addition = 20 + 30; //output: 50
+
+如此類推
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
