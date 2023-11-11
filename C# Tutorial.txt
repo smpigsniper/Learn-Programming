@@ -182,16 +182,16 @@ public void theFunction(Object variableName) {
 
 Exmaple:
 public bool checkAldult (int age) { //throw integer paramenter
-  if (age > 18) {
+  if (age >= 18) {
     return true;
   } else {
     return false;
   }
 }
 
-Alsp you can write this:
-publoc bool checkAldult(int age = 0) { // if you call this function you can did not throw any paramenter, but it will default the age is 0
-  if (age > 18) {
+Also you can write this:
+public bool checkAldult(int age = 0) { // if you call this function you can did not throw any paramenter, but it will default the age is 0
+  if (age >= 18) {
     return true;
   }
   else {
@@ -199,3 +199,25 @@ publoc bool checkAldult(int age = 0) { // if you call this function you can did 
   }
 }
 ------------------------------------------------------------------
+Call Function:
+
+When you understand how to wirte a function, then you deed how to call the function
+
+You have a this function:
+public bool checkAldult(int age) {
+  if (age >= 18) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+call it this function is very easy
+
+checkAldult(20);
+
+this function have a return, you can write this:
+bool isAldult = checkAldult(20); // the isAldult variable will be true
+
+-----------------------------------------------------------------------

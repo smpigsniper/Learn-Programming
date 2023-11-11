@@ -1,0 +1,6 @@
+This Tutorial is talking about SQL Database.
+You can use MySQL, Ms SQL, Oracle SQL
+They both statement is same but some inside function or the function Syntax is different.
+That base on each Database version each version the statement is different.
+If you want deep learn to database please tell me.
+
