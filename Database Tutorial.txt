@@ -29,3 +29,22 @@ A table can have only ONE primary key; and in the table, this primary key can co
 
 Now you created a user table in your database
 ---------------------Most to use SQL -----------------------------------------
+SELECT 從 Database 拎資料
+Syntax:
+SELECT *
+FROM table;
+
+-- * mean all column
+you also write
+SELECT username, password
+FROM USER;
+
+if you only want to show the password
+SELECT password
+FROM USER;
+
+SQL condition 
+SELECT username, password
+FROM USER
+WHERE username = 'Pang';
+
