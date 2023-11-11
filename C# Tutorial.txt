@@ -88,3 +88,114 @@ addition = 20 + 30; //output: 50
 如此類推
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+logic part:
+
+if/ case statement
+These two both with same it but the writing the method is different.
+I suggest use if is better than everyone, because it is easy to look and understand.
+However, sometime use case is better.
+
+Syntax:
+
+if (bool) { // bool is a logic
+  //do somethings
+}
+
+int age = 18;
+for example:
+if ( age >= 18) { //判斷句 如果age大過等於18
+    Console.WriteLine("You are aldult");
+} else if ( age >= 12) { //如果age大過等於12
+    Console.WriteLine("You are teenager");
+} else { //兩者都不是就行下面
+  Console.WriteLine("You are children");
+}
+
+-------------------------------------------------------------
+Loop:
+for loop, for each, while both is loop method
+I suggest you fouce on for loop because it is easy to understand and learn it.
+Syntax:
+
+for (delcare variable; bool; variable do somethings){
+
+}
+
+for example:
+for (int i = 0; i < 10; i++) {
+  Console.WriteLine(i.ToString());
+}
+The output is:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Why did not show the 10?
+It is because when i = 10l i is not small 10.
+
+-------------------------------------------------------------------------
+fucntion part:
+
+public void thisFunction() {
+  // do somethings
+}
+void that mean when run this function did not return anythings
+直行呢個function。
+既然直接行呢個function點解唔直接打入去要行function
+因為create咗個function 可以call 好多次，如果下下打入去仲要行好多個code好長同好冇為
+
+
+public bool theBooleanFunction() { //this function will return bool
+  int a = 0, b = 0;
+  if ( a == b ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+舉一反三
+you can write:
+public int theIntgerFunction () {
+
+}
+public string theStringFunction() {
+
+}
+
+---------------------------------------------------------------
+function paramenter:
+
+Ojbect can be int, string, array, bool...
+Also you can decalre the Object it will talk it later
+Syntax:
+public void theFunction(Object variableName) {
+
+}
+
+Exmaple:
+public bool checkAldult (int age) { //throw integer paramenter
+  if (age > 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Alsp you can write this:
+publoc bool checkAldult(int age = 0) { // if you call this function you can did not throw any paramenter, but it will default the age is 0
+  if (age > 18) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+------------------------------------------------------------------
