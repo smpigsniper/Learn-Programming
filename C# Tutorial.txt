@@ -173,7 +173,7 @@ public string theStringFunction() {
 ---------------------------------------------------------------
 function paramenter:
 
-Ojbect can be int, string, array, bool...
+Object can be int, string, array, bool...
 Also you can decalre the Object it will talk it later
 Syntax:
 public void theFunction(Object variableName) {
@@ -221,3 +221,33 @@ this function have a return, you can write this:
 bool isAldult = checkAldult(20); // the isAldult variable will be true
 
 -----------------------------------------------------------------------
+Object-oriented programming (OOP)
+
+create a class or you can say create a object
+In programmer, create a class or create object it will create a file
+---------------------------------------------------------------------
+For example:
+class User {
+  public string username { get; set; }
+  public string password { get; set; }
+}
+
+// create the object is look like so easy
+---------------------------------------------------------------------
+How to use it the Object?
+Example:
+
+User user = new User(); //Declare the Object
+user.username = "Pang";
+user.password = "123456";
+
+-------------------------------------------------------------------
+Function use Object
+
+public bool loginSuccess(User user) { //use OO, you can throw less paramenter
+  if (user.username == "Pang" && user.password == "123456") {
+    return true;
+  } else {
+    return false;
+  }
+}
