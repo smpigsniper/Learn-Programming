@@ -84,3 +84,99 @@ DELETE FROM table_name WHERE condition;
 Example:
 DELETE FROM USER WHERE username = 'Pang';
 --------------------Basic SQL END----------------------------
+
+More SQL
+DISTINCT, COUNT, MIN, MAX --Function in SQL
+GROUP BY
+HAVING -- if use group and more condition you will use HAVING
+ORDER BY -- sorting, you can base on which column to sorting such as username desc
+-- ASC順序 DESC倒序
+
+Exmaple 
+SELECT username, COUNT(*)
+FROM USER
+GROUP BY username
+HAVING Count(*) > 1;
+------------------------------------------------------------------
+init to create table
+
+CREATE TABLE Employee {
+    employee_id INT NOT NULL,
+    employee_name VARCHAR(255) NOT NULL,
+    employee_password VARCHAR(255) NOT NULL,
+    CONSTRAINT PK_Employee PRIMARY KEY (id, employee_name)
+};
+
+CREATE TABLE SALES_M {
+    invoice_no varchar(255) NOT NULL PRIMARY KEY,
+    sales_datetime datetime NOT NULL,
+    employee_id int NOT NULL,
+};
+
+CREATE TABLE SALES_D {
+    invoice_no VARCHAR(255) NOT NULL,
+    item_id INT NOT NULL,
+}
+
+CREATE TABLE ITEM {
+    id INT NOT NULL PRIMARY KEY,
+    item_name VARCHAR(255),
+    item_price decimal(8, 2); --8位數加小數點後2個位
+    create_by VARCHAR(255);
+    create_at datetime
+};
+
+Join Table
+join table is a use two join it together
+LEFT JOIN, LEFT OUTER JOIN, RIGHT JOIN, RIGHT JOIN, INNER JOIN
+-- Tips--
+left join show 出嚟個record 影響左右, 影響上下嘅係union 之後再講
+-- SELECT column as 'A'  AS show 出嚟個table column 個名改咗
+ 
+ SELECT *
+ FROM SALES_M m -- 'm' template sales_m table rename to m
+ LEFT JOIN SALES_D d
+ ON (m.invoice_no = d.invoice_no)
+ LEFT JOIN ITEM i
+ ON (d.item_id = i.id)
+ LEFT JOIN Employee e
+ ON (m.employee_id = e.employee_id)
+-- this sql will take it all sales 
+-- Why need join did not put all data to one table
+如果將所有records放係一個table咁個 table 資料會好大 因為入資料果會有好多野都重複可以係其他table拎到
+
+In this sql you can get each invoice who sale item and the item name
+also you can add where clause to filter somethings
+
+you don't care right join inner join etc...
+that always most use left join more detail what different about left join you can google it that some maths
+
+------------------------------------------------------------------------------
+UNION/ UNION ALL
+
+What different between UNION AND UNION ALL
+UNION if records is same one the record did not show it
+else 
+UNION ALL will show all records
+
+Example:
+
+SELECT item_name
+FROM ITEM
+UNION ALL
+SELECT item_name
+FROM ITEM;
+
+The result will show two records from item table with item name
+
+SELECT item_name
+FORM ITEM
+UNION 
+SELECT item_name
+FORM ITEM;
+
+The result will show all item_name when item_name is same it will show it one record in here.
+
+---------------------------Learn More--------------------------------
+SELECT IN SELECT
+LEFT JOIN SELECT 
