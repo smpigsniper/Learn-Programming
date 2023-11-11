@@ -4,3 +4,28 @@ They both statement is same but some inside function or the function Syntax is d
 That base on each Database version each version the statement is different.
 If you want deep learn to database please tell me.
 
+One server can be more Database
+foreach database can be more table
+
+-- create table statement
+
+CREATE TABLE table_name {
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+}
+
+Example:
+
+CREATE TABLE USER {
+    username varchar(255) NOT NULL PRIMARY KEY,
+    password varchar(255) NOT NULL
+};
+
+What is the PRIMARY KEY?
+primary key is a constraint uniquely identifies each record in a table
+Primary keys must contain UNIQUE values, and cannot contain NULL values.
+A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).
+
+Now you created a user table in your database
+---------------------Most to use SQL -----------------------------------------

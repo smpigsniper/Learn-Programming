@@ -251,3 +251,5 @@ public bool loginSuccess(User user) { //use OO, you can throw less paramenter
     return false;
   }
 }
+
+-------------------------bacis C# End---------------------------------
