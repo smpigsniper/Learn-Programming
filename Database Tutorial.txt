@@ -48,3 +48,39 @@ SELECT username, password
 FROM USER
 WHERE username = 'Pang';
 
+if you want to more condition you can add 'AND', 'OR', 'IN'
+google it
+
+-----------------------------------------------------------
+INSERT 入資料到Table:
+
+Syntax:
+INSERT INTO table_name (column1, column2) VALUES
+(value1, value2);
+
+Example:
+INSERT INTO USER (username, password) VALUES 
+('Pang', '123456');
+
+------------------------------------------------------------
+Update 改Table 資料
+Syntax:
+Update table_name
+SET column = values;
+
+Example:
+UPDATE USER
+SET password = '234567'
+WHERE username = 'Pang';
+
+Now the table record have 1 record
+username = 'Pang'
+password = '234567'
+------------------------------------------------------------
+Delete record:
+Syntax:
+DELETE FROM table_name WHERE condition;
+
+Example:
+DELETE FROM USER WHERE username = 'Pang';
+--------------------Basic SQL END----------------------------
