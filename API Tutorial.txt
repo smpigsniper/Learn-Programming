@@ -3,6 +3,11 @@ that uses HTTP requests to access and use data.
 That data can be used to GET, PUT, POST and DELETE data types, 
 which refers to the reading, updating, creating and deleting of operations concerning resources.
 
+Using "POSTMAN" Application to debug and some test, you can donwload it.
+
+Type of JSON Data:
+Number, String, Boolean, Array, Object, Whitespace and Null
+
 Most format is JOSN
 Exmaple:
 {
@@ -35,3 +40,54 @@ Exmaple:
 }
 
 ------------------------------------------------------------------------
+There are some knowledge or some skill about the API
+There are 2 methods to throw the data to backend to do it.
+
+1. url paramenter
+2. request body paramenter
+
+I sugget it use request body paramenter, it is because is more security to protact the data.
+Why have a url paramenter?
+Special One Exmaple:
+using API via GET to run it,
+"GET" this channel can not request body paramenter, but it can via url paramenter to know user data.
+However, normaly it using POST can do it everythings.
+
+When same url it can using different method such as 
+url: http://www.a.com/ using a "GET" can run it "Z" fucntion
+url: http://www.a.com/ using a "POST" can run it "X" fucntion
+url: http://www.a.com/ using a "PUT" can run it "Y" fucntion
+url: http://www.a.com/ using a "DELETE" can run it "W" fucntion
+
+They both retrun the data it can different
+
+-------------------------------------------------------------------------
+"JSON" format is very important in API
+It using body request and return data.
+The most using is POST:
+
+request body:
+{
+    "username": "Pang",
+    "password" "123456"
+}
+When you post it this data you write it the function it will return somethings or nothing.
+But the 100% will return somethings.
+If I write some API have a little patten in API
+response data:
+{
+    "success" : 0,
+    "reason": "Error"
+    "data": []
+}
+Also network success or not it can using http status can know that
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+The POSTMAN have some inforamtion when you testing.
+
+Why I still using this patten?
+It it because is not network problem is a database problem such as
+INSERT same primary key in database. Database can not INSERT the item
+and it will response success: 0 and show it the reason.
+Also the status code still is 200.
+
+
