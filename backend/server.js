@@ -1,4 +1,6 @@
-const express = require('express')
+const express = require('express');
+const bodyParser = require('body-parser');
+const basicRouter = require('./routes');
 // require need to install package
 // in terminal type npm i express
 // and npm i nodemon
@@ -6,9 +8,8 @@ const express = require('express')
 const app = express()
 const port = 8080
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/', basicRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
