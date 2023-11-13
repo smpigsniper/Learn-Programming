@@ -116,6 +116,8 @@ CREATE TABLE SALES_M {
 CREATE TABLE SALES_D {
     invoice_no VARCHAR(255) NOT NULL,
     item_id INT NOT NULL,
+    qty INT NOT NULL,
+    sales_price decimal(8, 2)
 }
 
 CREATE TABLE ITEM {
@@ -180,3 +182,28 @@ The result will show all item_name when item_name is same it will show it one re
 ---------------------------Learn More--------------------------------
 SELECT IN SELECT
 LEFT JOIN SELECT 
+
+SELECT IN SELECT：
+想法係inside SELECT做先 做出result 比外面用
+Exmaple:
+SELECT *
+FROM SALES_D WHERE item_id IN (
+    SELECT *
+    FROM ITEM
+    WHERE item_price > 10
+)
+呢條SQL 搵出item_price > $10 而且又賣個出去嘅item
+
+LEFT JOIN IN SELECT 道理一樣但有少少唔同
+因為FROM table_name
+出嚟個result 會base on your result table to do somethings
+
+Exmaple:
+SELECT *
+FROM (
+    SELECT * FROM ITEM
+)
+
+It's look like that
+
+----------------------Basic Database End--------------------------------
