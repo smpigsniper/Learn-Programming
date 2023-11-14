@@ -1,9 +1,9 @@
 use tutorial;
-CREATE TABLE Employee (
-    employee_id INT NOT NULL AUTO_INCREMENT,
-    employee_name VARCHAR(255) NOT NULL,
-    employee_password VARCHAR(255) NOT NULL,
-    CONSTRAINT PK_Employee PRIMARY KEY (employee_id, employee_name)
+CREATE TABLE EMPLOYEE (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    CONSTRAINT PK_Employee PRIMARY KEY (id, name)
 );
 
 CREATE TABLE SALES_M (

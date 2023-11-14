@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const con = require('../db/dbConnection');
 const dbCon = require('../db/dbConnection');
 
 router.get('/', function(req, res, ){
@@ -15,5 +14,7 @@ router.get('/testDBConnection', function(req, res) {
     })
     con.end();
 });
+
+router.post('/createEmployee', addEmployee);
 
 module.exports = router;
